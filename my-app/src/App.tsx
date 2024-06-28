@@ -15,6 +15,9 @@ function App() {
           <Bio />
           <Files />
           <Contact />
+          <footer className="font-cairo text-base text-center mt-16">
+            COPYRIGHT © 2024 GIAMELA MEDIATION - ALL RIGHTS RESERVED.
+          </footer>
         </div>
       </div>
     </>
