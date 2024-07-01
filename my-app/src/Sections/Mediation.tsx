@@ -10,7 +10,7 @@ export function Mediation() {
   return (
     <div>
       <Title text="Mediation" />
-      <div className="w-1/2 m-auto my-16">
+      <div className="w-3/4 m-auto my-16">
         <div
           className="flex justify-between hover:cursor-pointer"
           onClick={() => {
