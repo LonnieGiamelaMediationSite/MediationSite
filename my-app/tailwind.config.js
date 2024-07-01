@@ -18,6 +18,8 @@ export default {
         "background-white": "#F5F5F5",
         "accent-blue": "#123354",
         "headline-gray": "#656565",
+        "button-text-gray": "#E5E5E5",
+        "button-gray": "#F8F6F4",
       },
       fontFamily: {
         cairo: ["Cairo", "san-serif"],
