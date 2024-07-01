@@ -1,24 +1,155 @@
+import { useEffect, useRef, useState } from "react";
 import { Bio } from "./Sections/Bio";
 import { Contact } from "./Sections/Contact";
 import { Files } from "./Sections/Files";
-import { Landing } from "./Sections/Landing";
 import { Mediation } from "./Sections/Mediation";
+import { useIsVisible } from "./UseIsVisible";
 import "./index.css";
+import { Footer } from "./Components/Footer";
+import { NavBar } from "./Components/NavBar";
 
 function App() {
+  const ref1 = useRef(null);
+  const isVisibleLanding = useIsVisible(ref1);
+
+  const ref2 = useRef(null);
+  const isVisibleMediation = useIsVisible(ref2);
+
+  const ref3 = useRef(null);
+  const isVisibleBio = useIsVisible(ref3);
+
+  const ref4 = useRef(null);
+  const isVisibleFiles = useIsVisible(ref4);
+
+  const ref5 = useRef(null);
+  const isVisibleContact = useIsVisible(ref5);
+
+  const ref6 = useRef(null);
+  const [logoIsFixed, setLogoIsFixed] = useState(false);
+
+  const ref7 = useRef(null);
+  const [navIsFixed, setNavIsFixed] = useState(false);
+
+  // Handle scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > ref6.current.clientHeight - 1000) {
+        setLogoIsFixed(true);
+      } else {
+        setLogoIsFixed(false);
+      }
+      if (window.scrollY > ref7.current.clientHeight - 1000) {
+        setNavIsFixed(true);
+      } else {
+        setNavIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="bg-background-white">
-        <div className="p-16">
-          <Landing />
-          <Mediation />
-          <Bio />
-          <Files />
-          <Contact />
+        <div className="px-16">
+          <div ref={ref1} id="home">
+            <div className="flex h-screen items-center">
+              <div className="basis-1/2">
+                <img
+                  src="/GiamelaMediationLogo.png"
+                  ref={ref6}
+                  className={`w-1/2 mb-4 m-auto transition-all ${
+                    logoIsFixed ? "fixed top-0" : "static"
+                  }`}
+                />
+                <p
+                  className={`font-cairo font-extralight text-base w-5/6 mb-14 m-auto text-justify leading-10 transition-opacity ease-in duration-[1500ms] ${
+                    isVisibleLanding ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  Giamela Mediation was started in 2023 as a means to both give
+                  back to the legal community and to assist colleagues more
+                  expeditiously resolve disputes prior to expenditure of
+                  unnecessary time and resources in litigation. I believe that
+                  mediation allows parties the opportunity to take control of
+                  their future prior to putting it into the hands of a judge,
+                  arbitrator or jury.
+                </p>
+                <div
+                  ref={ref7}
+                  className={`transition-all ${
+                    navIsFixed ? "fixed top-10" : "static"
+                  }`}
+                >
+                  <NavBar className={`w-1/2 mb-4 m-auto`} />
+                </div>
+              </div>
+              <div
+                className={`transition-opacity ease-in duration-[1500ms] basis-1/2 ${
+                  isVisibleLanding ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <div className="rounded-lg bg-accent-blue w-max m-auto">
+                  <img src="/headshot.png" className="w-full" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-background-white">
+        <div className="px-16">
+          <div
+            ref={ref2}
+            className={`transition-opacity ease-in duration-[1500ms] ${
+              isVisibleMediation ? "opacity-100" : "opacity-0"
+            }`}
+            id="mediation"
+          >
+            <Mediation />
+          </div>
+          <div
+            ref={ref3}
+            className={`transition-opacity ease-in duration-[1500ms] ${
+              isVisibleBio ? "opacity-100" : "opacity-0"
+            }`}
+            id="biography"
+          >
+            <Bio />
+          </div>
+          <div
+            ref={ref4}
+            className={`transition-opacity ease-in duration-[1500ms] ${
+              isVisibleFiles ? "opacity-100" : "opacity-0"
+            }`}
+            id="files"
+          >
+            <Files />
+          </div>
+          <div
+            ref={ref5}
+            className={`transition-opacity ease-in duration-[1500ms] ${
+              isVisibleContact ? "opacity-100" : "opacity-0"
+            }`}
+            id="contact"
+          >
+            <Contact />
+          </div>
           <footer className="font-cairo text-base text-center mt-16">
             COPYRIGHT © 2024 GIAMELA MEDIATION - ALL RIGHTS RESERVED.
           </footer>
         </div>
+      </div>
+      <div
+        className={`transition-opacity ease-in duration-700 ${
+          !isVisibleContact ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <Footer />
       </div>
     </>
   );

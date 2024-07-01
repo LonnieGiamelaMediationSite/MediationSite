@@ -11,6 +11,7 @@ export default {
     "./src/Sections/Mediation.tsx",
     "./src/Sections/Files.tsx",
     "./src/Sections/Contact.tsx",
+    "./src/Components/Footer.tsx",
   ],
   theme: {
     extend: {

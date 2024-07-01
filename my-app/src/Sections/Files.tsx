@@ -3,7 +3,7 @@ import "../index.css";
 
 export function Files() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col justify-center">
       <Title text="Files" />
       <div className="flex justify-center my-16">
         {[1, 2, 3].map((number) => {

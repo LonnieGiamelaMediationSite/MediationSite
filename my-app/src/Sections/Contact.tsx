@@ -3,7 +3,7 @@ import "../index.css";
 
 export function Contact() {
   return (
-    <div>
+    <div className="flex flex-col justify-end">
       <Title text="Contact" />
       <div>
         <div className="flex justify-center my-8">
@@ -12,7 +12,7 @@ export function Contact() {
               href={"https://www.linkedin.com/in/lonnie-giamela-9466296/"}
               target="_blank"
             >
-              <div className="w-max bg-accent-blue rounded-full hover:cursor-pointer">
+              <div className="w-max bg-accent-blue rounded-full hover:cursor-pointer hover:bg-headline-gray">
                 <img
                   src="/In-White-128@2x.png"
                   alt="Linkedin Logo"
@@ -23,7 +23,7 @@ export function Contact() {
           </div>
           <div className=" mx-4">
             <a href={"https://x.com/calemployeratty?lang=en"} target="_blank">
-              <div className="w-max bg-accent-blue rounded-full hover:cursor-pointer">
+              <div className="w-max bg-accent-blue rounded-full hover:cursor-pointer hover:bg-headline-gray">
                 <img src="x-logo-white.png" alt="X Logo" className="w-8 p-2" />
               </div>
             </a>

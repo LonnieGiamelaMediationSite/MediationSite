@@ -8,11 +8,11 @@ export function Mediation() {
   >();
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col justify-center">
       <Title text="Mediation" />
       <div className="w-3/4 m-auto my-16">
         <div
-          className="flex justify-between hover:cursor-pointer"
+          className="flex justify-between hover:cursor-pointer hover:text-accent-blue"
           onClick={() => {
             if (view === "fee") {
               setView(undefined);
@@ -28,7 +28,7 @@ export function Mediation() {
           <h1 className="font-cairo font-bold text-lg">+</h1>
         </div>
         <div className={view === "fee" ? "" : "hidden"}>
-          <p className="font-cairo font-extralight text-lg">
+          <p className="font-cairo font-extralight text-lg leading-10">
             Daily and half-day mediations are available. Half-Day mediations are
             $8,000 and Full-Day mediations are $10,000. The mediation fee
             includes all preparation time. Mediations can be in-person, virtual
@@ -43,7 +43,7 @@ export function Mediation() {
           </p>
         </div>
         <div
-          className="flex justify-between hover:cursor-pointer"
+          className="flex justify-between hover:cursor-pointer hover:text-accent-blue"
           onClick={() => {
             if (view === "briefs") {
               setView(undefined);
@@ -57,7 +57,7 @@ export function Mediation() {
           <h1 className="font-cairo font-bold text-lg">+</h1>
         </div>
         <div className={view === "briefs" ? "" : "hidden"}>
-          <p className="font-cairo font-extralight text-lg">
+          <p className="font-cairo font-extralight text-lg leading-10">
             Mediation briefs are due five days prior to the mediation. Unless
             there is a unique legal issue in the case, I do not need a review of
             the prima facie elements of fair employment or wage hour causes of
@@ -72,7 +72,7 @@ export function Mediation() {
           </p>
         </div>
         <div
-          className="flex justify-between hover:cursor-pointer"
+          className="flex justify-between hover:cursor-pointer hover:text-accent-blue"
           onClick={() => {
             if (view === "agreements") {
               setView(undefined);
@@ -88,7 +88,7 @@ export function Mediation() {
           <h1 className="font-cairo font-bold text-lg">+</h1>
         </div>
         <div className={view === "agreements" ? "" : "hidden"}>
-          <p className="font-cairo font-extralight text-lg">
+          <p className="font-cairo font-extralight text-lg leading-10">
             I highly recommend the parties exchange a draft settlement
             agreement, or memorandum of understanding, prior to the mediation
             and can help in that process if necessary. Please make sure your
