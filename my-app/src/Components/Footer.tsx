@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <>
       <div className="w-full h-max bg-accent-blue flex justify-between items-center fixed bottom-0">
-        <div className="flex justify-center mx-24">
+        <div className="flex justify-center mx-36">
           <div className="mx-4">
             <a
               href={"https://www.linkedin.com/in/lonnie-giamela-9466296/"}
@@ -27,14 +27,14 @@ export function Footer() {
             </a>
           </div>
         </div>
-        <div className="text-background-white mx-24 text-center">
+        <div className="text-background-white mx-36 py-2 text-center">
           <a
-            className="font-cairo font-extralight text-sm "
+            className="font-cairo font-light text-lg"
             href="mailto:lonniegiamela@gmail.com"
           >
             lonniegiamela@gmail.com
           </a>
-          <p className="font-cairo font-extralight text-sm ">(818) 390-0019</p>
+          <p className="font-cairo font-light text-lg ">(818) 390-0019</p>
         </div>
       </div>
     </>

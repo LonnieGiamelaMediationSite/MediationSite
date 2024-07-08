@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Bio } from "./Sections/Bio";
 import { Contact } from "./Sections/Contact";
-import { Files } from "./Sections/Files";
 import { Mediation } from "./Sections/Mediation";
 import { useIsVisible } from "./UseIsVisible";
 import "./index.css";
@@ -18,9 +17,6 @@ function App() {
   const ref3 = useRef(null);
   const isVisibleBio = useIsVisible(ref3);
 
-  const ref4 = useRef(null);
-  const isVisibleFiles = useIsVisible(ref4);
-
   const ref5 = useRef(null);
   const isVisibleContact = useIsVisible(ref5);
 
@@ -33,12 +29,12 @@ function App() {
   // Handle scroll event
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > ref6.current.clientHeight - 1000) {
+      if (window.scrollY > ref6.current.clientHeight - 100000) {
         setLogoIsFixed(true);
       } else {
         setLogoIsFixed(false);
       }
-      if (window.scrollY > ref7.current.clientHeight - 1000) {
+      if (window.scrollY > ref7.current.clientHeight - 100000) {
         setNavIsFixed(true);
       } else {
         setNavIsFixed(false);
@@ -59,13 +55,22 @@ function App() {
           <div ref={ref1} id="home">
             <div className="flex h-screen items-center">
               <div className="basis-1/2">
-                <img
-                  src="/GiamelaMediationLogo.png"
-                  ref={ref6}
-                  className={`w-1/2 mb-4 m-auto transition-all ${
-                    logoIsFixed ? "fixed top-0" : "static"
+                <div
+                  className={` transition-all duration-700 ${
+                    logoIsFixed
+                      ? "fixed top-0 right-0 left-0 z-10 bg-background-white"
+                      : "static"
                   }`}
-                />
+                >
+                  <img
+                    src="/GiamelaMediationLogo.png"
+                    ref={ref6}
+                    onClick={() => window.location.replace("/")}
+                    className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer ${
+                      logoIsFixed ? "w-1/6 mt-4" : "w-1/2"
+                    }`}
+                  />
+                </div>
                 <p
                   className={`font-cairo font-extralight text-base w-5/6 mb-14 m-auto text-justify leading-10 transition-opacity ease-in duration-[1500ms] ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
@@ -73,19 +78,25 @@ function App() {
                 >
                   Giamela Mediation was started in 2023 as a means to both give
                   back to the legal community and to assist colleagues more
-                  expeditiously resolve disputes prior to expenditure of
-                  unnecessary time and resources in litigation. I believe that
-                  mediation allows parties the opportunity to take control of
-                  their future prior to putting it into the hands of a judge,
-                  arbitrator or jury.
+                  expeditiously resolve disputes prior to the expenditure of
+                  unnecessary time and resources in litigation. The
+                  super-majority of cases can and should settle prior to trial
+                  and mediation allows the opportunity to control their future
+                  prior to putting it in the hands of a judge, arbitrator or
+                  jury. Using more than two decades as an employment law
+                  practitioner, and recent experience as a panelist for both
+                  Resolve LA and the Central District’s ADR panel, I seek to
+                  bring an expeditious resolution to your dispute.
                 </p>
                 <div
                   ref={ref7}
-                  className={`transition-all ${
-                    navIsFixed ? "fixed top-10" : "static"
+                  className={`transition-all duration-700 ${
+                    navIsFixed
+                      ? "fixed top-24 left-0 right-0 z-20 bg-background-white drop-shadow-"
+                      : "static"
                   }`}
                 >
-                  <NavBar className={`w-1/2 mb-4 m-auto`} />
+                  <NavBar className={`w-1/2 mb-4 m-auto `} />
                 </div>
               </div>
               <div
@@ -120,15 +131,6 @@ function App() {
             id="biography"
           >
             <Bio />
-          </div>
-          <div
-            ref={ref4}
-            className={`transition-opacity ease-in duration-[1500ms] ${
-              isVisibleFiles ? "opacity-100" : "opacity-0"
-            }`}
-            id="files"
-          >
-            <Files />
           </div>
           <div
             ref={ref5}
