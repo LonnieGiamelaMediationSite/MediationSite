@@ -24,38 +24,13 @@ function App() {
   const ref6 = useRef<HTMLDivElement>(null);
   const isNavVisible = useIsVisible(ref6);
 
-  // Handle scroll event
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (!ref6.current || !ref7.current) {
-  //       throw new Error("Error");
-  //     }
-  //     if (window.scrollY > ref6.current.clientHeight - 100000) {
-  //       setLogoIsFixed(true);
-  //     } else {
-  //       setLogoIsFixed(false);
-  //     }
-  //     if (window.scrollY > ref7.current.clientHeight - 100000) {
-  //       setNavIsFixed(true);
-  //     } else {
-  //       setNavIsFixed(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <div className="bg-background-white">
-      <div className="bg-background-white -mb-36 ">
+      <div className="bg-background-white lg:-mb-36 ">
         <div className="px-16">
           <div ref={ref1} id="home">
             <div className="flex h-screen items-center">
-              <div className="basis-1/2">
+              <div className="basis-1/2 w-1/2 md:w-full">
                 <div
                   className={` transition-all duration-700 ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
@@ -64,11 +39,11 @@ function App() {
                   <img
                     src="/GiamelaMediationLogo.png"
                     onClick={() => window.location.replace("/")}
-                    className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer w-1/2`}
+                    className={` lg:mb-4 m-auto transition-all duration-700 hover:cursor-pointer w-1/2`}
                   />
                 </div>
                 <p
-                  className={`font-cairo font-extralight text-base w-5/6 mb-14 m-auto text-justify leading-10 transition-opacity ease-in duration-[1500ms] ${
+                  className={`font-cairo font-extralight text-sm md:text-base w-5/6 lg:mb-14 m-auto text-justify md:leading-7 lg:leading-10 transition-opacity ease-in duration-[1500ms] ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -90,7 +65,7 @@ function App() {
                     isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <NavBar className={`w-1/2 mb-4 m-auto `} />
+                  <NavBar className={`w-1/2 lg:mb-4 m-auto `} />
                 </div>
               </div>
               <div
@@ -98,7 +73,7 @@ function App() {
                   isVisibleLanding ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="rounded-lg bg-accent-blue w-max m-auto">
+                <div className="rounded-lg bg-accent-blue w-full md:w-max m-auto">
                   <img src="/headshot.png" className="w-full" />
                 </div>
               </div>
@@ -112,7 +87,7 @@ function App() {
             <div className="px-16">
               <div
                 ref={ref2}
-                className={`transition-opacity ease-in duration-[1500ms] pt-32 mt-16 ${
+                className={`transition-opacity ease-in duration-[1500ms] lg:pt-32 lg:mt-16 ${
                   isVisibleMediation ? "opacity-100" : "opacity-0"
                 }`}
                 id="mediation"
@@ -121,7 +96,7 @@ function App() {
               </div>
               <div
                 ref={ref3}
-                className={`transition-opacity ease-in duration-[1500ms] pt-32 ${
+                className={`transition-opacity ease-in duration-[1500ms] lg:pt-32 ${
                   isVisibleBio ? "opacity-100" : "opacity-0"
                 }`}
                 id="biography"
@@ -130,14 +105,14 @@ function App() {
               </div>
               <div
                 ref={ref5}
-                className={`transition-opacity ease-in duration-[1500ms] pt-32 ${
+                className={`transition-opacity ease-in duration-[1500ms] lg:pt-32 ${
                   isVisibleContact ? "opacity-100" : "opacity-0"
                 }`}
                 id="contact"
               >
                 <Contact />
               </div>
-              <footer className="font-cairo text-base text-center mt-16">
+              <footer className="font-cairo text-xs md:text-base text-center mt-4 md:mt-8 lg:mt-16">
                 COPYRIGHT © 2024 GIAMELA MEDIATION - ALL RIGHTS RESERVED.
               </footer>
             </div>
