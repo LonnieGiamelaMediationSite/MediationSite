@@ -26,8 +26,8 @@ function App() {
 
   return (
     <div className="bg-background-white">
-      <div className="bg-background-white lg:-mb-36 ">
-        <div className="px-16">
+      <div className="bg-background-white -mb-36 ">
+        <div className="px-6 md:px-16">
           <div ref={ref1} id="home">
             <div className="flex h-screen items-center">
               <div className="basis-1/2 w-1/2 md:w-full">
@@ -39,11 +39,11 @@ function App() {
                   <img
                     src="/GiamelaMediationLogo.png"
                     onClick={() => window.location.replace("/")}
-                    className={` lg:mb-4 m-auto transition-all duration-700 hover:cursor-pointer w-1/2`}
+                    className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer w-1/2`}
                   />
                 </div>
                 <p
-                  className={`font-cairo font-extralight text-sm md:text-base w-5/6 lg:mb-14 m-auto text-justify md:leading-7 lg:leading-10 transition-opacity ease-in duration-[1500ms] ${
+                  className={`font-cairo font-extralight text-sm md:text-base w-5/6 mb-14 m-auto text-justify md:leading-7 lg:leading-10 transition-opacity ease-in duration-[1500ms] ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -65,7 +65,7 @@ function App() {
                     isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <NavBar className={`w-1/2 lg:mb-4 m-auto `} />
+                  <NavBar className={`w-1/2 mb-4 m-auto `} />
                 </div>
               </div>
               <div
@@ -73,7 +73,7 @@ function App() {
                   isVisibleLanding ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="rounded-lg bg-accent-blue w-full md:w-max m-auto">
+                <div className="rounded-lg bg-accent-blue w-full m-auto">
                   <img src="/headshot.png" className="w-full" />
                 </div>
               </div>
@@ -84,10 +84,10 @@ function App() {
       <Header hidden={isNavVisible}>
         <>
           <div className="bg-background-white">
-            <div className="px-16">
+            <div className="px-6 md:px-16">
               <div
                 ref={ref2}
-                className={`transition-opacity ease-in duration-[1500ms] lg:pt-32 lg:mt-16 ${
+                className={`transition-opacity ease-in duration-[1500ms] pt-32 mt-16 ${
                   isVisibleMediation ? "opacity-100" : "opacity-0"
                 }`}
                 id="mediation"
@@ -96,7 +96,7 @@ function App() {
               </div>
               <div
                 ref={ref3}
-                className={`transition-opacity ease-in duration-[1500ms] lg:pt-32 ${
+                className={`transition-opacity ease-in duration-[1500ms] pt-32 ${
                   isVisibleBio ? "opacity-100" : "opacity-0"
                 }`}
                 id="biography"
@@ -105,7 +105,7 @@ function App() {
               </div>
               <div
                 ref={ref5}
-                className={`transition-opacity ease-in duration-[1500ms] lg:pt-32 ${
+                className={`transition-opacity ease-in duration-[1500ms] pt-32 ${
                   isVisibleContact ? "opacity-100" : "opacity-0"
                 }`}
                 id="contact"

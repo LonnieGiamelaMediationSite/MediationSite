@@ -5,8 +5,8 @@ export function Mediation() {
   return (
     <div className="min-h-screen flex flex-col justify-center">
       <Title text="Mediation" />
-      <div className="w-3/4 m-auto lg:my-16">
-        <div className="lg:my-8">
+      <div className="w-10/12 m-auto my-8 md:my-12 lg:my-16">
+        <div className="my-8">
           <h1 className="font-cairo font-bold text-sm md:text-base lg:text-lg">
             Mediation Fee
           </h1>
@@ -28,7 +28,7 @@ export function Mediation() {
             beneficial negotiation process possible.
           </p>
         </div>
-        <div className="lg:my-8">
+        <div className="my-8">
           <h1 className="font-cairo font-bold text-sm md:text-base lg:text-lg">
             Mediation Brief
           </h1>
@@ -52,7 +52,7 @@ export function Mediation() {
             exhibits.
           </p>
         </div>
-        <div className="lg:my-8">
+        <div className="my-8">
           <h1 className="font-cairo font-bold text-sm md:text-base lg:text-lg">
             Settlement Agreements
           </h1>

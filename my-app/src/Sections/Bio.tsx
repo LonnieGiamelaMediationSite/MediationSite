@@ -22,14 +22,14 @@ export function Bio() {
       <div className="flex flex-col">
         <div
           ref={refP1}
-          className={`flex w-10/12 lg:my-16 self-start justify-between items-center transition-opacity ease-in duration-[1500ms] ${
+          className={`flex w-full md:w-10/12 my-8 md:my-12 lg:my-16 self-start justify-between items-center transition-opacity ease-in duration-[1500ms] ${
             isVisibleP1 ? "opacity-100" : "opacity-0"
           }`}
         >
           <img
             src="/giamela-lonnie-headshot-2.jpeg"
             alt="Lonnie Giamela"
-            className="w-1/4 lg:m-16 rounded-md"
+            className="w-1/4 m-4 md:m-8 lg:m-16 rounded-md"
           />
           <p className="font-cairo font-extralight text-sm md:text-base m-auto text-justify md:leading-7 lg:leading-10">
             I have spent my entire legal career at Fisher Phillips, LLP,
@@ -48,7 +48,7 @@ export function Bio() {
         </div>
         <div
           ref={refP2}
-          className={`flex w-10/12 lg:my-16 self-end justify-between items-center transition-opacity ease-in duration-[1500ms] ${
+          className={`flex w-full md:w-10/12 my-8 md:my-12 lg:my-16 self-end justify-between items-center transition-opacity ease-in duration-[1500ms] ${
             isVisibleP2 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -65,7 +65,7 @@ export function Bio() {
         </div>
         <div
           ref={refP3}
-          className={`flex w-10/12 lg:my-16 self-start justify-between items-center transition-opacity ease-in duration-[1500ms] ${
+          className={`flex w-full md:w-10/12 my-8 md:my-12 lg:my-16 self-start justify-between items-center transition-opacity ease-in duration-[1500ms] ${
             isVisibleP3 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -80,7 +80,7 @@ export function Bio() {
         </div>
         <div
           ref={refP4}
-          className={`flex w-10/12 lg:my-16 self-end justify-between items-center transition-opacity ease-in duration-[1500ms] ${
+          className={`flex w-full md:w-10/12 my-8 md:my-12 lg:my-16 self-end justify-between items-center transition-opacity ease-in duration-[1500ms] ${
             isVisibleP4 ? "opacity-100" : "opacity-0"
           }`}
         >

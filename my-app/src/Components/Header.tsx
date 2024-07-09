@@ -19,7 +19,7 @@ export function Header({
           <img
             src="/GiamelaMediationLogo.png"
             onClick={() => window.location.replace("/")}
-            className={` lg:mb-4 m-auto transition-all duration-700 hover:cursor-pointer w-1/6 mt-4`}
+            className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer w-1/6 mt-4`}
           />
         </div>
         <div className={``}>
