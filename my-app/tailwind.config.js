@@ -12,6 +12,7 @@ export default {
     "./src/Sections/Files.tsx",
     "./src/Sections/Contact.tsx",
     "./src/Components/Footer.tsx",
+    "./src/Components/Header.tsx",
   ],
   theme: {
     extend: {
