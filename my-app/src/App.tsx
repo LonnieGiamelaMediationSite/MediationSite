@@ -8,27 +8,30 @@ import { Footer } from "./Components/Footer";
 import { NavBar } from "./Components/NavBar";
 
 function App() {
-  const ref1 = useRef(null);
+  const ref1 = useRef<HTMLDivElement>(null);
   const isVisibleLanding = useIsVisible(ref1);
 
-  const ref2 = useRef(null);
+  const ref2 = useRef<HTMLDivElement>(null);
   const isVisibleMediation = useIsVisible(ref2);
 
-  const ref3 = useRef(null);
+  const ref3 = useRef<HTMLDivElement>(null);
   const isVisibleBio = useIsVisible(ref3);
 
-  const ref5 = useRef(null);
+  const ref5 = useRef<HTMLDivElement>(null);
   const isVisibleContact = useIsVisible(ref5);
 
-  const ref6 = useRef(null);
+  const ref6 = useRef<HTMLImageElement>(null);
   const [logoIsFixed, setLogoIsFixed] = useState(false);
 
-  const ref7 = useRef(null);
+  const ref7 = useRef<HTMLDivElement>(null);
   const [navIsFixed, setNavIsFixed] = useState(false);
 
   // Handle scroll event
   useEffect(() => {
     const handleScroll = () => {
+      if (!ref6.current || !ref7.current) {
+        throw new Error("Error");
+      }
       if (window.scrollY > ref6.current.clientHeight - 100000) {
         setLogoIsFixed(true);
       } else {
