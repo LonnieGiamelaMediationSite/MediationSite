@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { Bio } from "./Sections/Bio";
 import { Contact } from "./Sections/Contact";
 import { Mediation } from "./Sections/Mediation";
@@ -6,6 +6,7 @@ import { useIsVisible } from "./UseIsVisible";
 import "./index.css";
 import { Footer } from "./Components/Footer";
 import { NavBar } from "./Components/NavBar";
+import { Header } from "./Components/Header";
 
 function App() {
   const ref1 = useRef<HTMLDivElement>(null);
@@ -20,58 +21,50 @@ function App() {
   const ref5 = useRef<HTMLDivElement>(null);
   const isVisibleContact = useIsVisible(ref5);
 
-  const ref6 = useRef<HTMLImageElement>(null);
-  const [logoIsFixed, setLogoIsFixed] = useState(false);
-
-  const ref7 = useRef<HTMLDivElement>(null);
-  const [navIsFixed, setNavIsFixed] = useState(false);
+  const ref6 = useRef<HTMLDivElement>(null);
+  const isNavVisible = useIsVisible(ref6);
 
   // Handle scroll event
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!ref6.current || !ref7.current) {
-        throw new Error("Error");
-      }
-      if (window.scrollY > ref6.current.clientHeight - 100000) {
-        setLogoIsFixed(true);
-      } else {
-        setLogoIsFixed(false);
-      }
-      if (window.scrollY > ref7.current.clientHeight - 100000) {
-        setNavIsFixed(true);
-      } else {
-        setNavIsFixed(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (!ref6.current || !ref7.current) {
+  //       throw new Error("Error");
+  //     }
+  //     if (window.scrollY > ref6.current.clientHeight - 100000) {
+  //       setLogoIsFixed(true);
+  //     } else {
+  //       setLogoIsFixed(false);
+  //     }
+  //     if (window.scrollY > ref7.current.clientHeight - 100000) {
+  //       setNavIsFixed(true);
+  //     } else {
+  //       setNavIsFixed(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <>
-      <div className="bg-background-white">
+    <div className="bg-background-white">
+      <div className="bg-background-white -mb-36 ">
         <div className="px-16">
           <div ref={ref1} id="home">
             <div className="flex h-screen items-center">
               <div className="basis-1/2">
                 <div
                   className={` transition-all duration-700 ${
-                    logoIsFixed
-                      ? "fixed top-0 right-0 left-0 z-10 bg-background-white"
-                      : "static"
+                    isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   <img
                     src="/GiamelaMediationLogo.png"
-                    ref={ref6}
                     onClick={() => window.location.replace("/")}
-                    className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer ${
-                      logoIsFixed ? "w-1/6 mt-4" : "w-1/2"
-                    }`}
+                    className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer w-1/2`}
                   />
                 </div>
                 <p
@@ -92,11 +85,9 @@ function App() {
                   bring an expeditious resolution to your dispute.
                 </p>
                 <div
-                  ref={ref7}
+                  ref={ref6}
                   className={`transition-all duration-700 ${
-                    navIsFixed
-                      ? "fixed top-24 left-0 right-0 z-20 bg-background-white drop-shadow-"
-                      : "static"
+                    isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   <NavBar className={`w-1/2 mb-4 m-auto `} />
@@ -115,48 +106,52 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-background-white">
-        <div className="px-16">
-          <div
-            ref={ref2}
-            className={`transition-opacity ease-in duration-[1500ms] ${
-              isVisibleMediation ? "opacity-100" : "opacity-0"
-            }`}
-            id="mediation"
-          >
-            <Mediation />
+      <Header hidden={isNavVisible}>
+        <>
+          <div className="bg-background-white">
+            <div className="px-16">
+              <div
+                ref={ref2}
+                className={`transition-opacity ease-in duration-[1500ms] pt-32 mt-16 ${
+                  isVisibleMediation ? "opacity-100" : "opacity-0"
+                }`}
+                id="mediation"
+              >
+                <Mediation />
+              </div>
+              <div
+                ref={ref3}
+                className={`transition-opacity ease-in duration-[1500ms] pt-32 ${
+                  isVisibleBio ? "opacity-100" : "opacity-0"
+                }`}
+                id="biography"
+              >
+                <Bio />
+              </div>
+              <div
+                ref={ref5}
+                className={`transition-opacity ease-in duration-[1500ms] pt-32 ${
+                  isVisibleContact ? "opacity-100" : "opacity-0"
+                }`}
+                id="contact"
+              >
+                <Contact />
+              </div>
+              <footer className="font-cairo text-base text-center mt-16">
+                COPYRIGHT © 2024 GIAMELA MEDIATION - ALL RIGHTS RESERVED.
+              </footer>
+            </div>
           </div>
           <div
-            ref={ref3}
-            className={`transition-opacity ease-in duration-[1500ms] ${
-              isVisibleBio ? "opacity-100" : "opacity-0"
+            className={`transition-opacity ease-in duration-300 ${
+              !isVisibleContact && !isNavVisible ? "opacity-100" : "opacity-0"
             }`}
-            id="biography"
           >
-            <Bio />
+            <Footer />
           </div>
-          <div
-            ref={ref5}
-            className={`transition-opacity ease-in duration-[1500ms] ${
-              isVisibleContact ? "opacity-100" : "opacity-0"
-            }`}
-            id="contact"
-          >
-            <Contact />
-          </div>
-          <footer className="font-cairo text-base text-center mt-16">
-            COPYRIGHT © 2024 GIAMELA MEDIATION - ALL RIGHTS RESERVED.
-          </footer>
-        </div>
-      </div>
-      <div
-        className={`transition-opacity ease-in duration-700 ${
-          !isVisibleContact ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <Footer />
-      </div>
-    </>
+        </>
+      </Header>
+    </div>
   );
 }
 
