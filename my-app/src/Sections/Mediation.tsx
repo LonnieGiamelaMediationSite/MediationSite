@@ -5,11 +5,13 @@ export function Mediation() {
   return (
     <div className="min-h-screen flex flex-col justify-center">
       <Title text="Mediation" />
-      <div className="w-3/4 m-auto my-16">
+      <div className="w-10/12 m-auto my-8 md:my-12 lg:my-16">
         <div className="my-8">
-          <h1 className="font-cairo font-bold text-lg">Mediation Fee</h1>
+          <h1 className="font-cairo font-bold text-sm md:text-base lg:text-lg">
+            Mediation Fee
+          </h1>
 
-          <p className="font-cairo font-extralight text-lg leading-10 text-justify">
+          <p className="font-cairo font-extralight text-sm md:text-base lg:text-lg md:leading-7 lg:leading-10 text-justify">
             Half-day and Full-Day mediations are available. Half-Day mediations
             are $6,000 and Full-Day mediations are $10,000. The mediation fee
             includes all preparation time. Mediations can be in-person, virtual
@@ -27,9 +29,11 @@ export function Mediation() {
           </p>
         </div>
         <div className="my-8">
-          <h1 className="font-cairo font-bold text-lg">Mediation Brief</h1>
+          <h1 className="font-cairo font-bold text-sm md:text-base lg:text-lg">
+            Mediation Brief
+          </h1>
 
-          <p className="font-cairo font-extralight text-lg leading-10 text-justify">
+          <p className="font-cairo font-extralight text-sm md:text-base lg:text-lg md:leading-7 lg:leading-10 text-justify">
             Mediation briefs are due five days prior to the mediation. It is
             unnecessary to provide summary of general laws applying to a claim
             or cause of action in the case (e.g. the Brinker standard for
@@ -49,11 +53,11 @@ export function Mediation() {
           </p>
         </div>
         <div className="my-8">
-          <h1 className="font-cairo font-bold text-lg">
+          <h1 className="font-cairo font-bold text-sm md:text-base lg:text-lg">
             Settlement Agreements
           </h1>
 
-          <p className="font-cairo font-extralight text-lg leading-10 text-justify">
+          <p className="font-cairo font-extralight text-sm md:text-base lg:text-lg md:leading-7 lg:leading-10 text-justify">
             I highly recommend the parties exchange a draft settlement
             agreement, or memorandum of understanding particularly in class
             action cases, prior to the mediation and can help in that process if

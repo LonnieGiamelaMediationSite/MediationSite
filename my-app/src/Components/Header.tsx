@@ -11,7 +11,7 @@ export function Header({
   return (
     <div className="bg-background-white">
       <div
-        className={`bg-background-white transition-all duration-300 fixed top-0 right-0 left-0 z-10 h-32 drop-shadow-sm ${
+        className={`bg-background-white transition-all duration-300 fixed top-0 right-0 left-0 z-10 lg:h-32 drop-shadow-sm ${
           hidden ? "opacity-0" : "opacity-100"
         }`}
       >
