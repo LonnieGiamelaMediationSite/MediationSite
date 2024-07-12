@@ -29,12 +29,14 @@ export function Footer() {
         </div>
         <div className="text-background-white mx-8 md:mx-36 py-2 text-center">
           <a
-            className="font-cairo font-light text-lg"
+            className="font-cairo font-light text-base md:text-lg"
             href="mailto:lonniegiamela@gmail.com"
           >
             lonniegiamela@gmail.com
           </a>
-          <p className="font-cairo font-light text-lg ">(818) 390-0019</p>
+          <p className="font-cairo font-light text-base md:text-lg ">
+            (818) 390-0019
+          </p>
         </div>
       </div>
     </>

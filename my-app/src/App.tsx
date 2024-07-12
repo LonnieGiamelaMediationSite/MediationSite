@@ -26,11 +26,11 @@ function App() {
 
   return (
     <div className="bg-background-white">
-      <div className="bg-background-white -mb-36 ">
+      <div className="bg-background-white -mb-30 md:-mb-36 ">
         <div className="px-6 md:px-16">
           <div ref={ref1} id="home">
             <div className="flex h-screen items-center">
-              <div className="basis-1/2 w-1/2 md:w-full">
+              <div className="basis-2/3 md:basis-1/2 w-1/2 md:w-full">
                 <div
                   className={` transition-all duration-700 ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
@@ -43,7 +43,7 @@ function App() {
                   />
                 </div>
                 <p
-                  className={`font-cairo font-extralight text-sm md:text-base w-5/6 mb-14 m-auto text-justify md:leading-7 lg:leading-10 transition-opacity ease-in duration-[1500ms] ${
+                  className={`font-cairo font-extralight text-base w-5/6 mb-14 m-auto text-justify md:leading-7 lg:leading-10 transition-opacity ease-in duration-[1500ms] ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -69,7 +69,7 @@ function App() {
                 </div>
               </div>
               <div
-                className={`transition-opacity ease-in duration-[1500ms] basis-1/2 ${
+                className={`transition-opacity ease-in duration-[1500ms] basis-1/3 md:basis-1/2 ${
                   isVisibleLanding ? "opacity-100" : "opacity-0"
                 }`}
               >
@@ -112,7 +112,7 @@ function App() {
               >
                 <Contact />
               </div>
-              <footer className="font-cairo text-xs md:text-base text-center mt-4 md:mt-8 lg:mt-16">
+              <footer className="font-cairo text-xs md:text-base text-center mb-4 mt-4 md:mt-8 lg:mt-16">
                 COPYRIGHT © 2024 GIAMELA MEDIATION - ALL RIGHTS RESERVED.
               </footer>
             </div>

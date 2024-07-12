@@ -22,16 +22,16 @@ export function Bio() {
       <div className="flex flex-col">
         <div
           ref={refP1}
-          className={`flex w-full md:w-10/12 my-8 md:my-12 lg:my-16 self-start justify-between items-center transition-opacity ease-in duration-[1500ms] ${
+          className={`md:flex w-full md:w-10/12 my-8 md:my-12 lg:my-16 self-start justify-between items-center transition-opacity ease-in duration-[1500ms] ${
             isVisibleP1 ? "opacity-100" : "opacity-0"
           }`}
         >
           <img
             src="/giamela-lonnie-headshot-2.jpeg"
             alt="Lonnie Giamela"
-            className="w-1/4 m-4 md:m-8 lg:m-16 rounded-md"
+            className="w-1/2 md:w-1/4 m-3 md:m-8 lg:m-16 rounded-md float-left md:float-none"
           />
-          <p className="font-cairo font-extralight text-sm md:text-base m-auto text-justify md:leading-7 lg:leading-10">
+          <p className="font-cairo font-extralight text-base m-auto text-justify md:leading-7 lg:leading-10">
             I have spent my entire legal career at Fisher Phillips, LLP,
             handling matters in all aspects of labor and employment law. My
             practice includes a mixture of preventative advice, single-plaintiff
@@ -52,7 +52,7 @@ export function Bio() {
             isVisibleP2 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="font-cairo font-extralight text-sm md:text-base m-auto text-justify md:leading-7 lg:leading-10">
+          <p className="font-cairo font-extralight text-base m-auto text-justify md:leading-7 lg:leading-10">
             I am a panel mediator for the United States District Court, Central
             District and ResolveLA mediation program at the Los Angeles Superior
             Court. I was one of sixteen attorneys asked by the Los Angeles
@@ -69,7 +69,7 @@ export function Bio() {
             isVisibleP3 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="font-cairo font-extralight text-sm md:text-base m-auto text-justify md:leading-7 lg:leading-10">
+          <p className="font-cairo font-extralight text-base m-auto text-justify md:leading-7 lg:leading-10">
             My professional experience brings unique perspective to the
             mediation process. I am one of the limited number of attorneys who
             has tried multiple class action lawsuits. I have litigated matters
@@ -84,7 +84,7 @@ export function Bio() {
             isVisibleP4 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="font-cairo font-extralight text-sm md:text-base m-auto text-justify md:leading-7 lg:leading-10">
+          <p className="font-cairo font-extralight text-base m-auto text-justify md:leading-7 lg:leading-10">
             I also incorporate, into my mediation practice, long-standing
             principles of my family business, of one of the oldest Italian
             submarine sandwich delis in Los Angeles, in how I approach
