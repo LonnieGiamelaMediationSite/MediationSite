@@ -112,7 +112,7 @@ function App() {
               >
                 <Contact />
               </div>
-              <footer className="font-cairo text-xs md:text-base text-center mb-4 mt-4 md:mt-8 lg:mt-16">
+              <footer className="font-cairo text-xs md:text-base text-center pb-4 mt-4 md:mt-8 lg:mt-16">
                 COPYRIGHT © 2024 GIAMELA MEDIATION - ALL RIGHTS RESERVED.
               </footer>
             </div>
