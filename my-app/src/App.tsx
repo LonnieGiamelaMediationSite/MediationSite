@@ -30,9 +30,9 @@ function App() {
         <div className="px-6 md:px-16">
           <div ref={ref1} id="home">
             <div className="flex h-screen items-center">
-              <div className="basis-2/3 md:basis-1/2 w-1/2 md:w-full">
+              <div className="basis-2/3 md:basis-1/2 w-1/2 md:w-full self-start md:self-auto">
                 <div
-                  className={` transition-all duration-700 ${
+                  className={` transition-all duration-700 pt-4 md:pt-0 ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -70,7 +70,7 @@ function App() {
               </div>
               <div
                 className={`transition-opacity ease-in duration-[1500ms] basis-1/3 md:basis-1/2 ${
-                  isVisibleLanding ? "opacity-100" : "opacity-0"
+                  isNavVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
                 <div className="rounded-lg bg-accent-blue w-full m-auto">
