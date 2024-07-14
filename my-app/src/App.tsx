@@ -24,12 +24,15 @@ function App() {
   const ref6 = useRef<HTMLDivElement>(null);
   const isNavVisible = useIsVisible(ref6);
 
+  const ref7 = useRef<HTMLDivElement>(null);
+  const isSmallNavVisible = useIsVisible(ref7);
+
   return (
     <div className="bg-background-white">
       <div className="bg-background-white -mb-30 md:-mb-36 ">
         <div className="px-6 md:px-16">
           <div ref={ref1} id="home">
-            <div className="flex h-screen items-center">
+            <div className="hidden md:flex h-screen items-center">
               <div className="basis-2/3 md:basis-1/2 w-1/2 md:w-full self-start md:self-auto">
                 <div
                   className={` transition-all duration-700 pt-4 md:pt-0 ${
@@ -78,10 +81,61 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="md:hidden h-screen flex items-center">
+              <div>
+                <div className="flex items-center p-4">
+                  <div className="basis-1/2 w-1/2 mx-2">
+                    <div
+                      className={` transition-all duration-700 ${
+                        isVisibleLanding ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      <img
+                        src="/GiamelaMediationLogo.png"
+                        onClick={() => window.location.replace("/")}
+                        className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer`}
+                      />
+                    </div>
+                  </div>
+                  <div className="basis-1/2 mx-2">
+                    <div className="rounded-lg bg-accent-blue w-full m-auto">
+                      <img src="/headshot.png" className="w-full" />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p
+                    className={`font-cairo font-extralight text-base w-5/6 mb-14 m-auto text-justify md:leading-7 lg:leading-10 transition-opacity ease-in duration-[1500ms] ${
+                      isVisibleLanding ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    Giamela Mediation was started in 2023 as a means to both
+                    give back to the legal community and to assist colleagues
+                    more expeditiously resolve disputes prior to the expenditure
+                    of unnecessary time and resources in litigation. The
+                    super-majority of cases can and should settle prior to trial
+                    and mediation allows the opportunity to control their future
+                    prior to putting it in the hands of a judge, arbitrator or
+                    jury. Using more than two decades as an employment law
+                    practitioner, and recent experience as a panelist for both
+                    Resolve LA and the Central District’s ADR panel, I seek to
+                    bring an expeditious resolution to your dispute.
+                  </p>
+                  <div
+                    ref={ref7}
+                    className={`transition-all duration-700 ${
+                      isVisibleLanding ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <NavBar className={`w-1/2 mb-4 m-auto `} />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <Header hidden={isNavVisible}>
+      <Header hidden={isNavVisible || isSmallNavVisible}>
         <>
           <div className="bg-background-white">
             <div className="px-6 md:px-16">
@@ -119,8 +173,10 @@ function App() {
           </div>
           <div
             className={`transition-opacity ease-in duration-300 ${
-              !isVisibleContact && !isNavVisible ? "opacity-100" : "opacity-0"
-            }`}
+              !isVisibleContact && !isSmallNavVisible && !isNavVisible
+                ? "opacity-100"
+                : "opacity-0"
+            } `}
           >
             <Footer />
           </div>
