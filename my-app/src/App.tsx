@@ -76,8 +76,11 @@ function App() {
                   isNavVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="rounded-lg bg-accent-blue w-full m-auto">
-                  <img src="/headshot.png" className="w-full" />
+                <div className="rounded-lg w-full m-auto">
+                  <img
+                    src="/HeadshotPro.png"
+                    className="w-5/8 rounded-lg m-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -98,8 +101,11 @@ function App() {
                     </div>
                   </div>
                   <div className="basis-1/2 mx-2">
-                    <div className="rounded-lg bg-accent-blue w-full m-auto">
-                      <img src="/headshot.png" className="w-full" />
+                    <div className="rounded-lg w-full m-auto">
+                      <img
+                        src="/HeadshotPro.png"
+                        className="w-5/8 rounded-lg m-auto"
+                      />
                     </div>
                   </div>
                 </div>

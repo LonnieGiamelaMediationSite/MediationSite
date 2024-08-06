@@ -27,7 +27,7 @@ export function Bio() {
           }`}
         >
           <img
-            src="/giamela-lonnie-headshot-2.jpeg"
+            src="/IMG_2363.jpg"
             alt="Lonnie Giamela"
             className="w-1/2 md:w-1/4 m-3 md:m-8 lg:m-16 rounded-md float-left md:float-none"
           />
