@@ -24,6 +24,9 @@ function App() {
   const ref6 = useRef<HTMLDivElement>(null);
   const isNavVisible = useIsVisible(ref6);
 
+  const ref4 = useRef<HTMLDivElement>(null);
+  const isSmallNavVisible = useIsVisible(ref4);
+
   return (
     <div className="bg-background-white">
       <div className="bg-background-white -mb-30 md:-mb-36 ">
@@ -76,7 +79,7 @@ function App() {
                 <div className="rounded-lg w-full m-auto">
                   <img
                     src="/HeadshotPro.png"
-                    className="w-5/8 rounded-lg m-auto"
+                    className="w-8/12 rounded-lg m-auto"
                   />
                 </div>
               </div>
@@ -97,11 +100,15 @@ function App() {
                       />
                     </div>
                   </div>
-                  <div className="basis-1/2 mx-2">
-                    <div className="rounded-lg w-full m-auto">
+                  <div className="basis-1/2 mx-2 ">
+                    <div
+                      className={`rounded-lg w-full m-auto transition-all duration-[1500ms] ${
+                        isVisibleLanding ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
                       <img
                         src="/HeadshotPro.png"
-                        className="w-5/8 rounded-lg m-auto"
+                        className="w-3/4 rounded-lg m-auto"
                       />
                     </div>
                   </div>
@@ -125,6 +132,7 @@ function App() {
                     bring an expeditious resolution to your dispute.
                   </p>
                   <div
+                    ref={ref4}
                     className={`transition-all duration-[1500ms] ${
                       isVisibleLanding ? "opacity-100" : "opacity-0"
                     }`}
@@ -137,7 +145,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Header hidden={ref6.current ? isNavVisible : true}>
+      <Header hidden={ref6.current ? isNavVisible || isSmallNavVisible : true}>
         <>
           <div className="bg-background-white">
             <div className="px-6 md:px-16">
@@ -175,7 +183,11 @@ function App() {
           </div>
           <div
             className={`transition-opacity ease-in duration-300 ${
-              !isVisibleContact && !isNavVisible && ref5.current && ref6.current
+              !isVisibleContact &&
+              !isNavVisible &&
+              !isSmallNavVisible &&
+              ref5.current &&
+              ref6.current
                 ? "opacity-100"
                 : "opacity-0"
             } `}
