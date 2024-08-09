@@ -24,9 +24,6 @@ function App() {
   const ref6 = useRef<HTMLDivElement>(null);
   const isNavVisible = useIsVisible(ref6);
 
-  const ref7 = useRef<HTMLDivElement>(null);
-  const isSmallNavVisible = useIsVisible(ref7);
-
   return (
     <div className="bg-background-white">
       <div className="bg-background-white -mb-30 md:-mb-36 ">
@@ -35,14 +32,14 @@ function App() {
             <div className="hidden md:flex h-screen items-center">
               <div className="basis-2/3 md:basis-1/2 w-1/2 md:w-full self-start md:self-auto">
                 <div
-                  className={` transition-all duration-700 pt-4 md:pt-0 ${
+                  className={` transition-all duration-[1500ms] pt-4 md:pt-0 ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   <img
                     src="/GiamelaMediationLogo.png"
                     onClick={() => window.location.replace("/")}
-                    className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer w-1/2`}
+                    className={` mb-4 m-auto transition-all duration-[1500ms] hover:cursor-pointer w-1/2`}
                   />
                 </div>
                 <p
@@ -64,7 +61,7 @@ function App() {
                 </p>
                 <div
                   ref={ref6}
-                  className={`transition-all duration-700 ${
+                  className={`transition-all duration-[1500ms] ${
                     isVisibleLanding ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -89,14 +86,14 @@ function App() {
                 <div className="flex items-center p-4">
                   <div className="basis-1/2 w-1/2 mx-2">
                     <div
-                      className={` transition-all duration-700 ${
+                      className={` transition-all duration-[1500ms] ${
                         isVisibleLanding ? "opacity-100" : "opacity-0"
                       }`}
                     >
                       <img
                         src="/GiamelaMediationLogo.png"
                         onClick={() => window.location.replace("/")}
-                        className={` mb-4 m-auto transition-all duration-700 hover:cursor-pointer`}
+                        className={` mb-4 m-auto transition-all duration-[1500ms] hover:cursor-pointer`}
                       />
                     </div>
                   </div>
@@ -128,8 +125,7 @@ function App() {
                     bring an expeditious resolution to your dispute.
                   </p>
                   <div
-                    ref={ref7}
-                    className={`transition-all duration-700 ${
+                    className={`transition-all duration-[1500ms] ${
                       isVisibleLanding ? "opacity-100" : "opacity-0"
                     }`}
                   >
@@ -141,7 +137,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Header hidden={isNavVisible || isSmallNavVisible}>
+      <Header hidden={ref6.current ? isNavVisible : true}>
         <>
           <div className="bg-background-white">
             <div className="px-6 md:px-16">
@@ -179,7 +175,7 @@ function App() {
           </div>
           <div
             className={`transition-opacity ease-in duration-300 ${
-              !isVisibleContact && !isSmallNavVisible && !isNavVisible
+              !isVisibleContact && !isNavVisible && ref5.current && ref6.current
                 ? "opacity-100"
                 : "opacity-0"
             } `}
