@@ -22,7 +22,7 @@ export function Bio() {
       <div className="flex flex-col">
         <div
           ref={refP1}
-          className={`md:flex w-full md:w-10/12 my-8 md:my-12 lg:my-16 self-start justify-between items-center transition-opacity ease-in duration-[1500ms] ${
+          className={`md:flex w-full md:w-10/12 my-8 md:mb-12 lg:mb-16 self-start justify-between items-center transition-opacity ease-in duration-[1500ms] ${
             isVisibleP1 ? "opacity-100" : "opacity-0"
           }`}
         >
