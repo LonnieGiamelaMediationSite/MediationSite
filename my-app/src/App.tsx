@@ -53,10 +53,10 @@ function App() {
                   Giamela Mediation was started in 2023 as a means to both give
                   back to the legal community and to assist colleagues more
                   expeditiously resolve disputes prior to the expenditure of
-                  unnecessary time and resources in litigation. The
-                  super-majority of cases can and should settle prior to trial
-                  and mediation allows the opportunity to control their future
-                  prior to putting it in the hands of a judge, arbitrator or
+                  unnecessary time and resources in litigation. Most cases can
+                  and should settle prior to trial. Mediation allows the
+                  opportunity for parties to control their future prior to
+                  putting their fate in the hands of a judge, arbitrator or
                   jury. Using more than two decades as an employment law
                   practitioner, and recent experience as a panelist for both
                   Resolve LA and the Central District’s ADR panel, I seek to
@@ -122,10 +122,10 @@ function App() {
                     Giamela Mediation was started in 2023 as a means to both
                     give back to the legal community and to assist colleagues
                     more expeditiously resolve disputes prior to the expenditure
-                    of unnecessary time and resources in litigation. The
-                    super-majority of cases can and should settle prior to trial
-                    and mediation allows the opportunity to control their future
-                    prior to putting it in the hands of a judge, arbitrator or
+                    of unnecessary time and resources in litigation. Most cases
+                    can and should settle prior to trial. Mediation allows the
+                    opportunity for parties to control their future prior to
+                    putting their fate in the hands of a judge, arbitrator or
                     jury. Using more than two decades as an employment law
                     practitioner, and recent experience as a panelist for both
                     Resolve LA and the Central District’s ADR panel, I seek to
