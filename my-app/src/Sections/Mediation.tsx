@@ -16,7 +16,7 @@ export function Mediation() {
             are $8,000 and Full-Day mediations are $12,500. The mediation fee
             includes all preparation time. Mediations can be in-person, virtual
             or hybrid. If the mediation requires more than reasonable follow-up,
-            time will be charged to the parties at the rate of $600/hour. The
+            time will be charged to the parties at the rate of $800/hour. The
             mediation fee is due two weeks from the date the confirming email is
             sent to all counsel. The fee is fully refundable if the mediation is
             cancelled or rescheduled at least thirty-days prior to the scheduled
