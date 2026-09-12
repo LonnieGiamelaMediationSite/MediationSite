@@ -13,7 +13,7 @@ export function Mediation() {
 
           <p className="font-cairo font-extralight text-base lg:text-lg md:leading-7 lg:leading-10 text-justify">
             Half-day and Full-Day mediations are available. Half-Day mediations
-            are $8,000 and Full-Day mediations are $12,500. The mediation fee
+            are $9,000 and Full-Day mediations are $15,000. The mediation fee
             includes all preparation time. Mediations can be in-person, virtual
             or hybrid. If the mediation requires more than reasonable follow-up,
             time will be charged to the parties at the rate of $800/hour. The
